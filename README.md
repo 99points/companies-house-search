@@ -68,7 +68,7 @@ php artisan companies:reindex
 
 ---
 
-🚀 Adding a new country
+## 🚀 Adding a new country
 
   1. Add DB connection in `.env`:
 
