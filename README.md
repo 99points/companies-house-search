@@ -20,11 +20,6 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
 * **High-Performance Full-Text Search**
   Powered by [Meilisearch](https://www.meilisearch.com/) — blazing fast, can handle millions of records with proper server resources.
 
-  ```bash
-  MEILI_HOST=http://127.0.0.1:7700
-  MEILI_KEY=masterKey
-  ```
-
 * **Pagination & Merged Data**
   When no search query is given, the system loads company data from all connected countries, merges, and paginates them seamlessly.
 
@@ -81,7 +76,14 @@ DB_MX_PASSWORD=root
 ./meilisearch
 ```
 
-3. Create the Meilisearch index and populate it:
+3. Add this to .env
+
+```bash
+MEILI_HOST=http://127.0.0.1:7700
+MEILI_KEY=masterKey
+```
+
+4. Create the Meilisearch index and populate it:
 
 ```bash
 php artisan companies:reindex
