@@ -131,3 +131,13 @@ php artisan companies:reindex
         'engine' => null,
     ],
 ```
+
+## :zap: Why Modular Monolithic Architecture?
+
+* We wanted to easy to scale codebase and also each module can evolve independently.
+* Clear separation of concerns: CompanyRegistry handles all company-related logic. Search handles Meilisearch indexing and queries.
+* Ease of maintenance: Bugs and features are easier to locate.
+* Adding a new feature (e.g., Reports analytics), no changes to existing modules.
+* Each country has its own provider class (SGCompanyProvider, UKCompanyProvider) for DB access
+
+
