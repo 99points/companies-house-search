@@ -4,7 +4,7 @@ namespace App\CompanyRegistry\Infrastructure\Providers;
 
 use App\CompanyRegistry\Domain\DTOs\CompanyDTO;
 use Illuminate\Support\Collection;
-
+use Illuminate\Support\Facades\DB;
 
 class UKCompanyProvider implements CompanyProviderInterface
 {
