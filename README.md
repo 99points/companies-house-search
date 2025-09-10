@@ -68,7 +68,7 @@ DB_MX_USERNAME=root
 DB_MX_PASSWORD=root
 ```
 
-#IMPORTANT FOR MULTIDATABSE PROJECT:
+### IMPORTANT FOR MULTIDATABSE PROJECT:
 For Laravel apps with multiple databases, it’s common to still have a default DB set, because some services like cache, queue, or session need a “primary” connection.
 BUT IF WE ARE NOT USING DEFAULT DB SET, LIKE I DID THIS FOR THIS PROJECT AS YOU SEE ABOVE 3 CONNECTIONS DO NOT HAVE DEFAULT DB SET. 
 
