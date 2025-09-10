@@ -22,7 +22,27 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
   DB_UK_PASSWORD=root
   ```
 
-  2. Add provider entry in `config/company_providers.php` (no new PHP class needed).
+  2. Update `/app/Providers/CompanyModuleServiceProvider.php` to add new country provider.
+  3. Add new country provider in `app/CompanyRegistry/Infrastructure/Providers/` (copy the other country and make changes).
+  4. Add new connection to `config/database.php`
+  
+  ```bash
+  'mysql_uk' => [
+        'driver' => 'mysql',
+        'host' => env('DB_UK_HOST'),
+        'port' => env('DB_UK_PORT'),
+        'database' => env('DB_UK_DATABASE'),
+        'username' => env('DB_UK_USERNAME'),
+        'password' => env('DB_UK_PASSWORD'),
+        'unix_socket' => env('DB_SOCKET', ''),
+        'charset' => 'utf8mb4',
+        'collation' => 'utf8mb4_unicode_ci',
+        'prefix' => '',
+        'strict' => true,
+        'engine' => null,
+    ],
+```
+  5. In `app/Http/Controllers/SearchController.php` update index() accordingly
 
 * **Multi-Country Support**
   Currently supports:
