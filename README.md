@@ -44,6 +44,7 @@ composer install
 cp .env.example .env
 php artisan key:generate
 npm install
+npm run dev OR npm run build
 ```
 
 This project requires 3 dbs, we need these connection in .env
@@ -66,6 +67,12 @@ DB_MX_DATABASE=companies_house_mx
 DB_MX_USERNAME=root
 DB_MX_PASSWORD=root
 ```
+
+#IMPORTANT FOR MULTIDATABSE PROJECT:
+For Laravel apps with multiple databases, it’s common to still have a default DB set, because some services like cache, queue, or session need a “primary” connection.
+BUT IF WE ARE NOT USING DEFAULT DB SET, LIKE I DID THIS FOR THIS PROJECT AS YOU SEE ABOVE 3 CONNECTIONS DO NOT HAVE DEFAULT DB SET. 
+
+THEN YOU MUST set: `SESSION_DRIVER=file` in .env
 
 ### Install and Run Meilisearch
 
