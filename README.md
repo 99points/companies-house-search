@@ -42,7 +42,9 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
         'engine' => null,
     ],
 ```
+
   5. In `app/Http/Controllers/SearchController.php` update index() accordingly
+
 
 * **Multi-Country Support**
   Currently supports:
