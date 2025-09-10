@@ -28,7 +28,7 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
 * **Pagination & Merged Data**
   When no search query is given, the system loads company data from all connected countries, merges, and paginates them seamlessly.
 
----
+--- 
 
 ## 🚀 Setup Instructions
 
@@ -49,6 +49,27 @@ composer install
 cp .env.example .env
 php artisan key:generate
 npm install
+```
+
+This project requires 3 dbs, we need these connection in .env
+```bash
+DB_UK_HOST=127.0.0.1
+DB_UK_PORT=8889
+DB_UK_DATABASE=companies_house_uk
+DB_UK_USERNAME=root
+DB_UK_PASSWORD=root
+
+DB_SG_HOST=127.0.0.1
+DB_SG_PORT=8889
+DB_SG_DATABASE=companies_house_sg
+DB_SG_USERNAME=root
+DB_SG_PASSWORD=root
+
+DB_MX_HOST=127.0.0.1
+DB_MX_PORT=8889
+DB_MX_DATABASE=companies_house_mx
+DB_MX_USERNAME=root
+DB_MX_PASSWORD=root
 ```
 
 ### Install and Run Meilisearch
