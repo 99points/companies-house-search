@@ -24,7 +24,8 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
 
   2. Update `/app/Providers/CompanyModuleServiceProvider.php` to add new country provider.
   3. Add new country provider in `app/CompanyRegistry/Infrastructure/Providers/` (copy the other country and make changes).
-  4. Add new connection to `config/database.php`
+  4. In `app/Http/Controllers/SearchController.php` update index() accordingly.
+  5. Add new connection to `config/database.php`
   
   ```bash
   'mysql_uk' => [
@@ -42,9 +43,6 @@ Designed for scalability, easy onboarding of new countries, and lightning-fast s
         'engine' => null,
     ],
 ```
-
-  5. In `app/Http/Controllers/SearchController.php` update index() accordingly
-
 
 * **Multi-Country Support**
   Currently supports:
